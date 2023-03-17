@@ -1,4 +1,4 @@
-package vojteu.springframework.spring5recipeapp.domain;
+package vojteu.springframework.domain;
 
 import jakarta.persistence.*;
 

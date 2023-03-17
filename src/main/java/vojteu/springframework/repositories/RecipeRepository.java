@@ -1,7 +1,7 @@
-package vojteu.springframework.spring5recipeapp.repositories;
+package vojteu.springframework.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import vojteu.springframework.spring5recipeapp.domain.Recipe;
+import vojteu.springframework.domain.Recipe;
 
 public interface RecipeRepository extends CrudRepository<Recipe, Long> {
 }

@@ -13,7 +13,18 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="1017aff0-7d39-4acb-b0ea-05246762fec2">
-      <console name="work" type="STANDARD" schema="mojadb" session="Main" />
+      <console name="work" type="STANDARD" schema="mojadb" session="Main"><![CDATA[INSERT INTO category VALUES ('American');
+INSERT INTO category VALUES ('Italian');
+INSERT INTO category VALUES ('Mexican');
+INSERT INTO category VALUES ('Fast Food');
+INSERT INTO unit_of_measure VALUES ('Teaspoon');
+INSERT INTO unit_of_measure VALUES ('Tablespoon');
+INSERT INTO unit_of_measure VALUES ('Cup');
+INSERT INTO unit_of_measure VALUES ('Pinch');
+INSERT INTO unit_of_measure VALUES ('Ounce');
+INSERT INTO unit_of_measure VALUES ('Each');
+INSERT INTO unit_of_measure VALUES ('Dash');
+INSERT INTO unit_of_measure VALUES ('Pint');]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -26,7 +37,8 @@
     <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/data.sql" connection-id="1017aff0-7d39-4acb-b0ea-05246762fec2" session-id="MAIN" current-schema="mojadb2" />
+    <mapping file-url="file://$APPLICATION_CONFIG_DIR$/consoles/db/b889fb63-0dcd-4f42-b41e-5bcd247ae439/console.sql" connection-id="1017aff0-7d39-4acb-b0ea-05246762fec2" session-id="MAIN" current-schema="mojadb" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/data.sql" connection-id="1017aff0-7d39-4acb-b0ea-05246762fec2" session-id="MAIN" current-schema="mojadb" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />

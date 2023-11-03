@@ -1,15 +1,16 @@
 package vojteu.springframework.domain;
 
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 
 @Data
-@EqualsAndHashCode(exclude = {"recipes"})
+@EqualsAndHashCode(exclude = "recipe")
 @Entity
 public class Ingredient {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,5 +31,4 @@ public class Ingredient {
         this.amount = amount;
         this.uom = uom;
     }
-
 }

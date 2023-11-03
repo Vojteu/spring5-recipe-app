@@ -1,9 +1,9 @@
 package vojteu.springframework.domain;
 
 
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.Set;
 
 @Data

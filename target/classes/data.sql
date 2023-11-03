@@ -1,3 +1,9 @@
+create table category(
+name varchar(40)
+);
+create table unit_of_measure(
+name varchar(40)
+);
 INSERT INTO category VALUES ('American');
 INSERT INTO category VALUES ('Italian');
 INSERT INTO category VALUES ('Mexican');
@@ -9,4 +15,4 @@ INSERT INTO unit_of_measure VALUES ('Pinch');
 INSERT INTO unit_of_measure VALUES ('Ounce');
 INSERT INTO unit_of_measure VALUES ('Each');
 INSERT INTO unit_of_measure VALUES ('Dash');
-INSERT INTO unit_of_measure VALUES ('Pint');
+INSERT INTO unit_of_measure VALUES ('yhm');

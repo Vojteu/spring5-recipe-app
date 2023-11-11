@@ -2,9 +2,11 @@ package vojteu.springframework.services;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import vojteu.springframework.commands.RecipeCommand;
 import vojteu.springframework.domain.Recipe;
 import vojteu.springframework.repositories.RecipeRepository;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Slf4j
@@ -23,5 +25,32 @@ public class RecipeServiceImpl implements RecipeService {
         Set<Recipe> recipeSet = new HashSet<>();
         recipeRepository.findAll().iterator().forEachRemaining(recipeSet::add);
         return recipeSet;
+    }
+
+    @Override
+    public Recipe findById(Long l) {
+
+        Optional<Recipe> recipeOptional = recipeRepository.findById(l);
+
+        if (!recipeOptional.isPresent()) {
+            throw new RuntimeException("Recipe Not Found!");
+        }
+
+        return recipeOptional.get();
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        recipeRepository.deleteById(id);
+    }
+
+    @Override
+    public RecipeCommand saveRecipeCommand(RecipeCommand command) {
+        return null;
+    }
+
+    @Override
+    public RecipeCommand findCommandById(Long id) {
+        return null;
     }
 }

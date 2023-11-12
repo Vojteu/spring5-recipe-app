@@ -28,7 +28,6 @@ public class RecipeServiceImplTest {
 
     @Test
     public void getRecipeByIdTest() throws Exception {
-
         Recipe recipe = new Recipe();
         recipe.setId(1L);
         Optional<Recipe> recipeOptional = Optional.of(recipe);

@@ -1,5 +1,6 @@
 package vojteu.springframework.commands;
 
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,7 +8,8 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-public class IngredientCommand {
+public class UnitOfMeasureCommand {
     private Long id;
+    private String description;
 
 }

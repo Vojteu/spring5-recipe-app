@@ -46,10 +46,10 @@ public class RecipeServiceImpl implements RecipeService {
         return recipeOptional.get();
     }
 
-//    @Override
-//    public void deleteById(Long id) {
-//        recipeRepository.deleteById(id);
-//    }
+    @Override
+    public void deleteById(Long id) {
+        recipeRepository.deleteById(id);
+    }
 
     @Override
     @Transactional

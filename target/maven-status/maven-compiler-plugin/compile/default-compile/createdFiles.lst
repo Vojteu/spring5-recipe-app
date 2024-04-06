@@ -1,0 +1,14 @@
+vojteu\springframework\repositories\UnitOfMeasureRepository.class
+vojteu\springframework\services\RecipeService.class
+vojteu\springframework\domain\Category.class
+vojteu\springframework\domain\Difficulty.class
+vojteu\springframework\domain\Ingredient.class
+vojteu\springframework\domain\UnitOfMeasure.class
+vojteu\springframework\bootstrap\RecipeBootstrap.class
+vojteu\springframework\repositories\CategoryRepository.class
+vojteu\springframework\domain\Recipe.class
+vojteu\springframework\Spring5RecipeAppApplication.class
+vojteu\springframework\controllers\IndexController.class
+vojteu\springframework\repositories\RecipeRepository.class
+vojteu\springframework\services\RecipeServiceImpl.class
+vojteu\springframework\domain\Notes.class

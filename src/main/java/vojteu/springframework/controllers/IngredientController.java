@@ -6,18 +6,22 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import vojteu.springframework.domain.UnitOfMeasure;
 import vojteu.springframework.services.IngredientService;
 import vojteu.springframework.services.RecipeService;
+import vojteu.springframework.services.UnitOfMeasureService;
 
 @Slf4j
 @Controller
 public class IngredientController {
     private final RecipeService recipeService;
     private final IngredientService ingredientService;
+    private final UnitOfMeasureService unitOfMeasureService;
 
-    public IngredientController(RecipeService recipeService, IngredientService ingredientService) {
+    public IngredientController(RecipeService recipeService, IngredientService ingredientService, UnitOfMeasureService unitOfMeasureService) {
         this.recipeService = recipeService;
         this.ingredientService = ingredientService;
+        this.unitOfMeasureService = unitOfMeasureService;
     }
 
     @GetMapping

@@ -10,6 +10,7 @@ import vojteu.springframework.commands.IngredientCommand;
 import vojteu.springframework.commands.RecipeCommand;
 import vojteu.springframework.services.IngredientService;
 import vojteu.springframework.services.RecipeService;
+import vojteu.springframework.services.UnitOfMeasureService;
 
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.*;
@@ -24,6 +25,8 @@ public class IngredientControllerTest {
     IngredientService ingredientService;
     @Mock
     RecipeService recipeService;
+    @Mock
+    UnitOfMeasureService unitOfMeasureService;
 
     IngredientController controller;
     MockMvc mockMvc;
@@ -32,7 +35,7 @@ public class IngredientControllerTest {
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
-        controller = new IngredientController(recipeService, ingredientService);
+        controller = new IngredientController(recipeService, ingredientService, unitOfMeasureService);
         mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
     }
 

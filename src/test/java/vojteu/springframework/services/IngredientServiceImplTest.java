@@ -5,11 +5,14 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import vojteu.springframework.commands.IngredientCommand;
+import vojteu.springframework.converters.IngredientCommandToIngredient;
 import vojteu.springframework.converters.IngredientToIngredientCommand;
+import vojteu.springframework.converters.UnitOfMeasureCommandToUnitOfMeasure;
 import vojteu.springframework.converters.UnitOfMeasureToUnitOfMeasureCommand;
 import vojteu.springframework.domain.Ingredient;
 import vojteu.springframework.domain.Recipe;
 import vojteu.springframework.repositories.RecipeRepository;
+import vojteu.springframework.repositories.UnitOfMeasureRepository;
 
 import java.util.Optional;
 
@@ -20,20 +23,27 @@ import static org.mockito.Mockito.*;
 
 public class IngredientServiceImplTest {
     private final IngredientToIngredientCommand ingredientToIngredientCommand;
+    private final IngredientCommandToIngredient ingredientCommandToIngredient;
 
     @Mock
     RecipeRepository recipeRepository;
+    @Mock
+    UnitOfMeasureRepository unitOfMeasureRepository;
     IngredientService ingredientService;
 
-    public IngredientServiceImplTest(){
-        this.ingredientToIngredientCommand = new IngredientToIngredientCommand(new UnitOfMeasureToUnitOfMeasureCommand());
+    public IngredientServiceImplTest() {
+        this.ingredientToIngredientCommand =
+                new IngredientToIngredientCommand(new UnitOfMeasureToUnitOfMeasureCommand());
+        this.ingredientCommandToIngredient =
+                new IngredientCommandToIngredient(new UnitOfMeasureCommandToUnitOfMeasure());
     }
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
-        ingredientService = new IngredientServiceImpl(ingredientToIngredientCommand, recipeRepository);
+        ingredientService = new IngredientServiceImpl(ingredientToIngredientCommand,recipeRepository,ingredientCommandToIngredient,
+               unitOfMeasureRepository);
     }
 
     @Test
